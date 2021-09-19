@@ -1,0 +1,45 @@
+.hero {
+  &__section {
+    text-align: center;
+    padding: 200px 0;
+
+    background-color: $bg-dark;
+  }
+
+  &__button--primary {
+    min-width: 200px;
+    padding: 10px 32px;
+
+    border: none;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+  }
+}
+
+.section__title--hero {
+  margin-bottom: 30px;
+  width: 696px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: $lighter;
+}
+
+.overlay {
+  max-width: 1600px;
+  max-height: 600px;
+  margin: -200px auto;
+  padding: inherit;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

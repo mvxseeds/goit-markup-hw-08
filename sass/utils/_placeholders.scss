@@ -1,0 +1,40 @@
+body {
+  background-color: $lighter;
+  color: $primary-text-color;
+
+  font-family: $Roboto;
+  letter-spacing: 0.03em;
+}
+
+%list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+%link {
+  text-decoration: none;
+}
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%icon-animation {
+  transition: fill 250ms cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+%call-to-act {
+  display: block;
+  margin-bottom: 20px;
+
+  color: $lighter;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

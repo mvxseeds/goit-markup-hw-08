@@ -1,0 +1,132 @@
+.footer {
+  padding: 60px 15px 60px 15px;
+  background-color: $bg-dark;
+
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__info {
+    margin-right: 70px;
+  }
+
+  &__join-us {
+    margin-right: 93px;
+  }
+}
+
+.contacts-list {
+  &__item--vertical {
+    margin-right: 0;
+    margin-bottom: 9px;
+  }
+
+  &__item--vertical:last-child {
+    margin-bottom: 0;
+  }
+
+  &__address {
+    color: $lighter;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    font-style: normal;
+  }
+
+  &__link--vertical {
+    color: $footer-lighter-60;
+
+    display: block;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  &__link--last {
+    margin-bottom: 0;
+  }
+}
+
+.footer,
+.sub-form {
+  &__text {
+    @extend %call-to-act;
+  }
+}
+
+.sub-form {
+  min-width: 570px;
+
+  &__field {
+    display: inline-block;
+  }
+
+  &__input {
+    display: block;
+    height: 50px;
+    width: 358px;
+    margin-right: 12px;
+    padding: 15px 15px;
+    outline: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background: transparent;
+
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    color: $footer-lighter-60;
+
+    &::placeholder {
+      color: $footer-lighter-60;
+    }
+  }
+
+  &__label {
+    visibility: none;
+
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+}
+
+.sub-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  width: 200px;
+  height: 50px;
+
+  &__text {
+    display: inline-flex;
+    margin-bottom: 0;
+    margin-right: 10px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+
+    letter-spacing: 0.06em;
+
+    text-transform: none;
+  }
+
+  &__sub-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    fill: $lighter;
+  }
+}

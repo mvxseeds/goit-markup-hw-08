@@ -1,0 +1,256 @@
+.backdrop {
+  position: fixed;
+  visibility: visible;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition-property: visibility, opacity;
+  transition-delay: 250ms;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+.modal {
+  position: absolute;
+
+  padding: 40px;
+
+  top: 50%;
+  left: 50%;
+  transform: scale(1) translate(-50%, -50%);
+  transform-origin: top left;
+  width: 528px;
+  min-height: 580px;
+  border-radius: 4px;
+
+  background-color: $lighter;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transition-property: transform;
+  transition-delay: 250ms;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+
+  &__close-icon {
+    position: fixed;
+    @extend %flex-center;
+
+    top: 0;
+    right: 0;
+    transform: translate(-8px, 8px);
+
+    width: 30px;
+    height: 30px;
+    padding: 0;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    cursor: pointer;
+    background-color: transparent;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      fill: $accent;
+    }
+  }
+
+  &__button--primary {
+    margin-top: 30px;
+    padding: 10px 55px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+
+    letter-spacing: 0.06em;
+  }
+}
+
+.backdrop.is-hidden .modal {
+  transform: scale(0) translate(-50%, -50%);
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+.form-order {
+  text-align: center;
+
+  &__text {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+
+    color: $secondary-text-color;
+  }
+
+  &__text--policy,
+  &__link--policy {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+
+    letter-spacing: 0.03em;
+
+    color: $primary-text-color;
+  }
+
+  &__link--policy {
+    color: $accent;
+    text-decoration: underline;
+  }
+
+  &__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 10px;
+
+    &--last {
+      margin-bottom: 0;
+    }
+
+    &-icon {
+      position: absolute;
+      @extend %flex-center;
+
+      bottom: 0;
+      left: 0;
+      margin: 11px 12px;
+
+      width: 18px;
+      height: 18px;
+
+      transition-property: fill;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover,
+    &:focus-within {
+      .form-order__textarea,
+      .form-order__input {
+        border-color: $accent;
+      }
+
+      .form-order__field-icon {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__label {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: $primary-text-color;
+
+    &--policy {
+      display: flex;
+      align-items: center;
+      margin: auto;
+
+      width: 425px;
+    }
+  }
+
+  &__input {
+    padding: 12px;
+    padding-left: 40px;
+    height: 40px;
+    outline: none;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__textarea {
+    resize: none;
+    max-height: 120px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    outline: none;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    color: $primary-text-color;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+
+  &__check-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+
+    border: 2px solid $secondary-text-color;
+    border-radius: 2px;
+    fill: $lighter;
+  }
+
+  &__checkbox {
+    visibility: none;
+
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+
+  &__checkbox:checked + &__check-icon {
+    border-color: transparent;
+    background-color: $accent;
+    background-origin: border-box;
+  }
+}

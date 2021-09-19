@@ -1,0 +1,38 @@
+.clients-list {
+  @extend %list, %flex-center;
+
+  &__item {
+    margin-right: 30px;
+    width: 170px;
+    height: 92px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+}
+
+.client {
+  @extend %flex-center;
+  width: inherit;
+  height: inherit;
+  border: 1px solid $icon-fill;
+  border-radius: 4px;
+
+  transition: 250ms;
+  transition-property: border-color;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+
+  &__icon {
+    fill: $icon-fill;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $accent;
+
+    .client__icon {
+      fill: $accent;
+    }
+  }
+}

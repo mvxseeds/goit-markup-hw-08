@@ -1,0 +1,15 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__title {
+    margin: 0 auto 50px;
+
+    color: $secondary-text-color;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}

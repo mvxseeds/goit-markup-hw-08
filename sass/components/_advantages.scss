@@ -1,0 +1,43 @@
+.advantages {
+  display: flex;
+
+  // make var width for adapt. ?
+  &__item {
+    display: block;
+    width: calc((100% - 3 * 30px) / 4);
+    margin-right: 30px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__icon-bg {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-secondary;
+  }
+
+  &__title {
+    margin: 0 auto 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+
+    text-transform: uppercase;
+
+    color: $secondary-text-color;
+  }
+
+  &__text {
+    margin: 0 auto;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}

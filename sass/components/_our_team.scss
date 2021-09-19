@@ -1,0 +1,48 @@
+.our-team {
+  &__section {
+    display: flex;
+    background-color: $bg-secondary;
+  }
+}
+
+.member-cards {
+  @extend %list;
+  display: flex;
+}
+
+.member-card {
+  display: block;
+  width: calc((100% - 3 * 30px) / 4);
+  margin-right: 30px;
+
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  background-color: $lighter;
+
+  &__descr {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+
+    color: $secondary-text-color;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 1.19;
+  }
+}
