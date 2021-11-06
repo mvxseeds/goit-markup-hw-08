@@ -3,10 +3,13 @@
 
 @import './utils/variables';
 @import './utils/placeholders';
+@import './utils/base';
 
 @import './components/container';
 @import './components/header';
+@import './components/menu';
 @import './components/logo';
+
 @import './components/sections';
 @import './components/buttons';
 @import './components/gallery';

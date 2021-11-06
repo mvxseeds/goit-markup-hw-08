@@ -1,0 +1,11 @@
+body {
+  background-color: $lighter;
+  color: $primary-text-color;
+
+  font-family: $Roboto;
+  letter-spacing: 0.03em;
+}
+
+body.modal-open {
+  overflow: hidden;
+}

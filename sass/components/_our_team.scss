@@ -1,13 +1,15 @@
 .our-team {
   &__section {
-    display: flex;
     background-color: $bg-secondary;
   }
 }
 
 .member-cards {
   @extend %list;
-  display: flex;
+
+  @media screen and (min-width: 767px) {
+    display: flex;
+  }
 }
 
 .member-card {

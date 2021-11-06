@@ -1,5 +1,5 @@
 .clients-list {
-  @extend %list, %flex-center;
+  @extend %list;
 
   &__item {
     margin-right: 30px;

@@ -3,18 +3,24 @@
 
 @import './utils/variables';
 @import './utils/placeholders';
+@import './utils/base';
 
 @import './components/container';
 @import './components/header';
+@import './components/menu';
 @import './components/logo';
+@import './components/social_box';
+
+/*
 @import './components/sections';
 @import './components/buttons';
 @import './components/hero';
 @import './components/advantages';
 @import './components/our_business';
 @import './components/our_team';
-@import './components/social_box';
 @import './components/clients';
 @import './components/footer';
+
 @import './components/modal';
 @import './components/animations';
+*/

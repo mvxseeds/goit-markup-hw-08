@@ -9,6 +9,48 @@
   &__item:last-child {
     margin-right: 0;
   }
+
+  &--mobile {
+    display: flex;
+    justify-content: flex-start;
+
+    // no social list on tablet
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__item--mobile {
+    border-radius: 0;
+    margin-right: 0;
+
+    @media screen and (max-width: 767px) {
+      padding: 0 10px 0 10px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:not(:last-child) {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+      }
+    }
+  }
+
+  &__link--mobile {
+    @extend %link;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    color: $accent;
+  }
 }
 
 .social-link {
