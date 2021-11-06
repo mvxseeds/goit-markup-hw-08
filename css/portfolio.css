@@ -514,15 +514,6 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .contacts-list__item {
-    margin-bottom: 10px;
-  }
-  .contacts-list__item:last-child {
-    margin-bottom: 0;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .contacts-list__item {
     margin-right: 30px;
@@ -557,6 +548,8 @@ body.modal-open {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-size: 12px;
     line-height: 1.17;
   }
@@ -564,6 +557,8 @@ body.modal-open {
 
 @media screen and (min-width: 1200px) {
   .contacts-list__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-size: 14px;
     line-height: 1.14;
   }
