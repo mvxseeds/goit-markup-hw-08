@@ -283,7 +283,7 @@ summary {
   text-decoration: none;
 }
 
-.header__container, .menu-toggle, .logo, .social-list, .client, .modal__close-icon, .form-order__field-icon {
+.header__container, .menu-toggle, .logo, .social-list, .client, .footer__info, .footer__join-us, .sub-form, .modal__close-icon, .form-order__field-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1024,30 +1024,52 @@ body.modal-open {
 }
 
 .footer {
-  padding: 60px 15px 60px 15px;
   background-color: #2f303a;
 }
 
 .footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.footer__info {
-  margin-right: 70px;
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
-.footer__join-us {
-  margin-right: 93px;
+.footer__info, .footer__join-us {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__contacts-list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
 }
 
 .contacts-list__item--vertical {
   margin-right: 0;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-list__item--vertical {
+    margin-bottom: 9px;
+  }
 }
 
 .contacts-list__item--vertical:last-child {
@@ -1073,12 +1095,23 @@ body.modal-open {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .footer__join-us,
+  .sub-form__join-us {
+    margin-bottom: 60px;
+  }
+}
+
 .sub-form {
-  min-width: 570px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .sub-form__field {
   display: inline-block;
+  margin-bottom: 20px;
 }
 
 .sub-form__input {
