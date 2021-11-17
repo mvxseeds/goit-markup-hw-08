@@ -36,7 +36,8 @@
 
   @media screen and (min-width: 1200px) {
     &__info {
-      margin-right: 90px;
+      width: 231px;
+      margin-right: 70px;
     }
 
     &__join-us {
@@ -53,6 +54,7 @@
 
   @media screen and (min-width: 1200px) {
     align-items: flex-start;
+    margin-bottom: 0;
   }
 }
 
@@ -132,8 +134,16 @@
   &__input {
     display: block;
     height: 50px;
-    width: 358px;
-    margin-right: 12px;
+
+    @media screen and (min-width: 480px) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-right: 12px;
+    }
+
     padding: 15px 15px;
     outline: none;
 
