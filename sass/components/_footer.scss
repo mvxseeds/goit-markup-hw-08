@@ -5,9 +5,16 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 768px) {
       display: flex;
       align-items: baseline;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
     }
   }
 
@@ -15,6 +22,26 @@
   &__join-us {
     @extend %flex-center;
     flex-direction: column;
+
+    @media screen and (min-width: 1200px) {
+      align-items: flex-start;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__info {
+      margin-right: 165px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__info {
+      margin-right: 90px;
+    }
+
+    &__join-us {
+      margin-right: 93px;
+    }
   }
 }
 
@@ -23,6 +50,10 @@
   align-items: center;
 
   margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    align-items: flex-start;
+  }
 }
 
 .contacts-list {
@@ -49,13 +80,17 @@
   }
 
   &__link--vertical {
-    color: $footer-lighter-60;
-
     display: block;
 
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
+
+    @media screen and (min-width: 1200px) {
+      padding: 0;
+    }
+
+    color: $footer-lighter-60;
   }
 
   &__link--last {
@@ -79,6 +114,15 @@
 .sub-form {
   @extend %flex-center;
   flex-direction: column;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    max-width: 570px;
+  }
 
   &__field {
     display: inline-block;
