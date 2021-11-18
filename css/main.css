@@ -834,6 +834,14 @@ body.modal-open {
   color: #ffffff;
 }
 
+@media screen and (max-width: 1199px) {
+  .section__title--hero {
+    width: 360px;
+    font-size: 26px;
+    line-height: 1.62;
+  }
+}
+
 .overlay {
   max-width: 1600px;
   max-height: 600px;
