@@ -46,7 +46,9 @@
   &__title {
     margin: 0 auto 10px;
 
-    text-align: center;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
 
     font-weight: 700;
     font-size: 14px;

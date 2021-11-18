@@ -787,8 +787,15 @@ ul {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section__title {
@@ -916,12 +923,17 @@ ul {
 
 .advantages__title {
   margin: 0 auto 10px;
-  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: #212121;
+}
+
+@media screen and (max-width: 767px) {
+  .advantages__title {
+    text-align: center;
+  }
 }
 
 .advantages__text {
@@ -932,6 +944,12 @@ ul {
 
 .our-business__section {
   padding-top: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .our-business__section {
+    display: none;
+  }
 }
 
 .card-set {
