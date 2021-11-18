@@ -283,7 +283,7 @@ summary {
   text-decoration: none;
 }
 
-.header__container, .menu-toggle, .logo, .social-list, .client, .footer__info, .footer__join-us, .sub-form, .modal__close-icon, .form-order__field-icon {
+.header__container, .menu-toggle, .logo, .social-list, .advantages__icon-bg, .client, .footer__info, .footer__join-us, .sub-form, .modal__close-icon, .form-order__field-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -316,6 +316,13 @@ body {
 
 body.modal-open {
   overflow: hidden;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .container {
@@ -854,40 +861,62 @@ body.modal-open {
   background-position: center;
 }
 
-.advantages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .advantages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
 }
 
 .advantages__item {
   display: block;
-  width: calc((100% - 3 * 30px) / 4);
-  margin-right: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .advantages__item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages__item {
+    width: calc((100% - 8 * 15px) / 4);
+  }
 }
 
 .advantages__item:last-child {
-  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .advantages__icon-bg {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #f5f4fa;
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages__icon-bg {
+    width: 270px;
+  }
 }
 
 .advantages__title {
   margin: 0 auto 10px;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
