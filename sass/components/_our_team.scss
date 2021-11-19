@@ -6,16 +6,41 @@
 
 .member-cards {
   @extend %list;
+  margin-right: -15px;
+  margin-left: -15px;
 
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
   }
 }
 
 .member-card {
   display: block;
-  width: calc((100% - 3 * 30px) / 4);
-  margin-right: 30px;
+  text-align: center;
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
+
+    &:last-child,
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 6 * 15px) / 4);
+  }
 
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -25,8 +50,14 @@
 
   &__descr {
     text-align: center;
+
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
   }
 
   &__title {
