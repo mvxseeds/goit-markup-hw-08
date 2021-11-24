@@ -1,21 +1,46 @@
 .clients-list {
   @extend %list;
+  display: flex;
 
-  &__item {
-    margin-right: 30px;
-    width: 170px;
-    height: 92px;
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
   }
 
-  &__item:last-child {
-    margin-right: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.clients-list__item {
+  width: calc((100% - 4 * 15px) / 2);
+  height: 92px;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 30px;
+
+  // selects 2 last childs starting from end
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 6 * 15px) / 3);
+
+    // selects 3 last childs starting from end
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 12 * 15px) / 6);
+    margin-bottom: 0;
   }
 }
 
 .client {
   @extend %flex-center;
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: 100%;
   border: 1px solid $icon-fill;
   border-radius: 4px;
 
