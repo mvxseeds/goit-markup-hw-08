@@ -23,18 +23,23 @@
   margin-bottom: 30px;
 
   font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 
-  @media screen and (max-width: 1199px) {
+  // horizontal scroll fix
+  @media screen and (max-width: 479px) {
+    width: 270px;
+    font-size: calc(18px + 0.2vw);
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
     width: 360px;
 
     font-size: 26px;
     line-height: 1.62;
   }
-
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
 
   color: $lighter;
 }

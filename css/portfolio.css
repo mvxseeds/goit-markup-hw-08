@@ -533,17 +533,25 @@ ul {
 .contacts-list__link {
   color: inherit;
   font-weight: 500;
+  line-height: 1.17;
   letter-spacing: 0.02em;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 479px) {
   .contacts-list__link--email {
     font-size: 24px;
-    line-height: 28px;
+  }
+  .contacts-list__link--phone {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .contacts-list__link--email {
+    font-size: 24px;
   }
   .contacts-list__link--phone {
     font-size: 34px;
-    line-height: 1.17;
   }
 }
 
@@ -966,10 +974,16 @@ ul {
 
 .social-list__link--mobile {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.22;
+  font-size: calc(12px + 0.25vw);
   letter-spacing: 0.02em;
   color: #2196f3;
+}
+
+@media screen and (min-width: 480px) {
+  .social-list__link--mobile {
+    font-size: 18px;
+    line-height: 1.22;
+  }
 }
 
 .social-link {
