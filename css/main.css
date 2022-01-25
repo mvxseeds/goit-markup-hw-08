@@ -877,6 +877,12 @@ ul {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .section__title--hero {
+    width: 696px;
+  }
+}
+
 .overlay {
   max-width: 1600px;
   max-height: 600px;
