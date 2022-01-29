@@ -940,7 +940,7 @@ ul {
   }
 }
 
-@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
   .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/d-hero-3200.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/d-hero-3200.jpg);
@@ -1137,6 +1137,28 @@ ul {
 @media screen and (min-width: 1200px) {
   .member-card {
     width: calc((100% - 6 * 15px) / 4);
+  }
+}
+
+.member-card__img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .member-card__img--tab, .member-card__img--desk {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .member-card__img--mob, .member-card__img--desk {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .member-card__img--mob, .member-card__img--tab {
+    display: none;
   }
 }
 
