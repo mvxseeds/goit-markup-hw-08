@@ -90,6 +90,28 @@
 
   &__img {
     display: block;
+    max-width: 100%;
+
+    @media screen and (max-width: 767px) {
+      &--tab,
+      &--desk {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      &--mob,
+      &--desk {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      &--mob,
+      &--tab {
+        display: none;
+      }
+    }
   }
 
   &__thumb {
