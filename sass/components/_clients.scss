@@ -6,34 +6,22 @@
     flex-wrap: wrap;
   }
 
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .clients-list__item {
-  width: calc((100% - 4 * 15px) / 2);
+  flex-basis: calc(100% / 2 - 30px);
   height: 92px;
-  margin-right: 15px;
-  margin-left: 15px;
-  margin-bottom: 30px;
-
-  // selects 2 last childs starting from end
-  &:nth-last-child(-n + 2) {
-    margin-bottom: 0;
-  }
+  margin-top: 30px;
+  margin-left: 30px;
 
   @media screen and (min-width: 768px) {
-    width: calc((100% - 6 * 15px) / 3);
-
-    // selects 3 last childs starting from end
-    &:nth-last-child(-n + 3) {
-      margin-bottom: 0;
-    }
+    flex-basis: calc(100% / 3 - 30px);
   }
 
   @media screen and (min-width: 1200px) {
-    width: calc((100% - 12 * 15px) / 6);
-    margin-bottom: 0;
+    width: calc(100% / 6 - 30px);
   }
 }
 
