@@ -1375,6 +1375,12 @@ ul {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .footer__join-us {
+    margin-top: 0;
+  }
+}
+
 .sub-form {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

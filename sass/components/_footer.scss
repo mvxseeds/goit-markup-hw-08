@@ -108,6 +108,12 @@
   }
 }
 
+.footer__join-us {
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
 .sub-form {
   @extend %flex-center;
   flex-direction: column;
